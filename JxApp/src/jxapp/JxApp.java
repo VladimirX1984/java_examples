@@ -43,7 +43,7 @@ public class JxApp {
         Print.print();
         Print.print("Generics!!!");
         Print.print();
-        
+
         CoffeeGenerator.main(args);
 
         BasicBounds.main(args);
@@ -66,8 +66,8 @@ public class JxApp {
 
         PlainGenericInheritance.main(args);
         SimplerPets.main(args);
-        Print.print();        
-        
+        Print.print();
+
         SelfBounding.main(args);
         SelfBoundingMethods.main(args);
         SelfBoundingAndCovariantArguments.main(args);
@@ -80,8 +80,23 @@ public class JxApp {
         Wildcards.main(args);
 
         Print.print();
+        Print.print("Dynamic mixing");
         Decoration.main(args);
         DynamicProxyMixin.main(args);
+
+        Print.print();
+        Print.print("Latent typing");
+        LatentReflection.main(args);
+        try {
+            ApplyTest.main(args);
+        }
+        catch (NoSuchMethodException ex) {
+            ex.printStackTrace();
+        }
+        Print.print();
+        FillTest.main(args);
+        Print.print();
+        Functional.main(args);
     }
 
 }
